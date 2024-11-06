@@ -5,8 +5,8 @@ function exposeJson(text, outsideViewer) {
     window.json = JSON.parse(text);
 
   } else {
-    var script = document.createElement("script") ;
-    script.innerHTML = 'window.json = ' + text + ';';
+    var script = document.createElement("script");
+    script.innerHTML = 'window.json = ' + JSON.stringify(JSON.parse(text)) + ';';
     document.head.appendChild(script);
   }
 }
