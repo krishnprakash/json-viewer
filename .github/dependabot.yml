@@ -26,7 +26,7 @@ concurrency:
 
 # Default to bash
 defaults:
-  run:
+  run:0b6a8b4c5683b8fb8db56b3411276f7df8ba81fa
     shell: bash
 
 jobs:
