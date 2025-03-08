@@ -13,7 +13,7 @@
     "extract-text-webpack-plugin": "0.8.x",
     "fs-extra": "0.18.x",
     "mousetrap": "1.5.x",
-    "node-libs-browser": "^1.0.0",
+    "node-libs-browser": "^2.2.1",
     "node-sass": "^9.0.0",
     "promise": "7.0.x",
     "sass-loader": "6.0.x",
