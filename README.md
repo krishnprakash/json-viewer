@@ -65,6 +65,10 @@ Features:
 
   [https://api.github.com/gists/public](https://api.github.com/gists/public)
 
+  [https://chromewebstore.google.com/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh]
+
+  [https://goo.gl/fmphc7]
+
   Large files:
 
   [https://raw.githubusercontent.com/ebrelsford/geojson-examples/master/596acres-02-18-2014.geojson](https://raw.githubusercontent.com/ebrelsford/geojson-examples/master/596acres-02-18-2014.geojson)
@@ -78,3 +82,4 @@ Features:
 ## License
 
 See [LICENSE](https://github.com/tulios/json-viewer/blob/master/LICENSE) for more details.
+[https://creativecommons.org/share-your-work/cclicenses/]
