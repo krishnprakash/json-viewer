@@ -19,7 +19,7 @@
     "sass-loader": "6.0.x",
     "style-loader": "0.18.x",
     "sweetalert": "2.1.x",
-    "webpack": "5.94.x"
+    "webpack": "5.98.x"
   },
   "scripts": {
     "release": "NODE_ENV=production npm run build",
