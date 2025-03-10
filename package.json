@@ -17,7 +17,7 @@
     "node-sass": "^9.0.0",
     "promise": "7.0.x",
     "sass-loader": "6.0.x",
-    "style-loader": "0.18.x",
+    "style-loader": "4.0.x",
     "sweetalert": "2.1.x",
     "webpack": "5.94.x"
   },
