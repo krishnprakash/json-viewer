@@ -16,7 +16,7 @@
     "node-libs-browser": "^2.2.1",
     "node-sass": "^9.0.0",
     "promise": "7.0.x",
-    "sass-loader": "6.0.x",
+    "sass-loader": "16.0.x",
     "style-loader": "4.0.x",
     "sweetalert": "2.1.x",
     "webpack": "5.98.x"
