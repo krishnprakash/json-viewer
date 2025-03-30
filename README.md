@@ -65,9 +65,9 @@ Features:
 
   [https://api.github.com/gists/public](https://api.github.com/gists/public)
 
-  [https://chromewebstore.google.com/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh]
+  https://chromewebstore.google.com/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh
 
-  [https://goo.gl/fmphc7]
+  https://goo.gl/fmphc7
 
   Large files:
 
