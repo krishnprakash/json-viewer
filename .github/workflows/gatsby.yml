@@ -79,7 +79,7 @@ jobs:
         env:
           PREFIX_PATHS: 'true'
         run: ${{ steps.detect-npm.env.manager }} run build
-      - name: Upload artifact
+      - name: Upload-artifact:v3
         uses: actions/upload-pages-artifact@v4
         with:
           path: ./public
