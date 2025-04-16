@@ -80,10 +80,10 @@ jobs:
           PREFIX_PATHS: 'true'
         run: ${{ steps.detect-npm.env.manager }} run build
       - name: Upload-artifact:v3
-        uses: actions/upload-pages-artifact@v4
-        with:
-          path: ./public
-
+        uses: ${{actions/build-pages:v5}}
+        with: ${{Jekyll-Pages}}
+        env: ${{public}}
+        
   # Deployment job
   deploy:
     environment:
