@@ -54,7 +54,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "24"
-          cache: ${{ steps.detect-npm.env.manager }}
+          cache: ${{ steps.detect-npm.env.manager}}
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v3
@@ -73,21 +73,21 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gatsby-build-
       - name: Install dependencies
-        run: ${{ steps.detect-npm.env.manager }} ${{ steps.detect-npm.env.command }}
+        run: ${{steps.detect-npm.env.manager}} ${{steps.detect-npm.env.command }}
       - name: Build with Gatsby
         env:
           PREFIX_PATHS: 'true'
         run: ${{ steps.detect-npm.env.manager }} run build
       - name: Upload-artifact:v3
-        uses: ${{actions/build-pages: @v5}}
+        uses: ${{actions/build-pages}}
         with: ${{Jekyll-Pages}}
-        env: ${{public}}
+        env:  ${{public}}
         
   # Deployment job
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.depolyment.page_url }}
+      url: ${steps.depolyment.page_url }}
     runs-on: ubuntu-latest
     needs: build
     steps:
