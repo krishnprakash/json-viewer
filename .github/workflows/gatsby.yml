@@ -78,10 +78,8 @@ jobs:
         env:
           PREFIX_PATHS: 'true'
         run: ${{ steps.detect-npm.env.manager}} run build
-      - name: Upload-artifact:v3
-        uses: ${actions}
-        with: ${Jekyll-Pages}
-        env:  ${public}
+      - name: (Upload-artifact:v3) run: git actions
+      
         
   # Deployment job
   deploy:
