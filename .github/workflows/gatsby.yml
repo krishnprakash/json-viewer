@@ -78,7 +78,7 @@ jobs:
         env:
           PREFIX_PATHS: 'true'
         run: ${{ steps.detect-npm.env.manager}} run build
-      - name: (Upload-actions:v3) run: git actions
+      - name: (actions:v3) run: git actions
       
         
   # Deployment job
