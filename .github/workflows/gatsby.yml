@@ -77,11 +77,11 @@ jobs:
       - name: Build with Gatsby
         env:
           PREFIX_PATHS: 'true'
-        run: ${{ steps.detect-npm.env.manager }} run build
+        run: ${{ steps.detect-npm.env.manager}} run build
       - name: Upload-artifact:v3
-        uses: ${{actions/build-pages}}
-        with: ${{Jekyll-Pages}}
-        env:  ${{public}}
+        uses: ${actions}
+        with: ${Jekyll-Pages}
+        env:  ${public}
         
   # Deployment job
   deploy:
