@@ -51,7 +51,7 @@ jobs:
             exit 1
           fi
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v5
         with:
           node-version: "24"
           cache: ${{ steps.detect-npm.env.manager}}
@@ -78,7 +78,7 @@ jobs:
         env:
           PREFIX_PATHS: 'true'
         run: ${{ steps.detect-npm.env.manager}} run build
-      - name: (actions:v3) run: git actions
+      - name: (actions:v5) run: git actions
       
         
   # Deployment job
