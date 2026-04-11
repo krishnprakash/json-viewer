@@ -32,10 +32,10 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
-        uses: actions/checkout@v6
-        name: Detect npm
-        id: detect-npm
-        run: |
+    uses: actions/checkout@v6
+    name: Detect npm
+      id: detect-npm
+     run: |
           if [ -f "${{ github.workspace }}/yarn.lock" ]; then
             echo "manager=yarn" >> $GITHUB_ENV
             echo "command=install" >> $GITHUB_ENV
