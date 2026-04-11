@@ -34,7 +34,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: Detect npm
         id: detect-npm
         run: |
@@ -51,7 +51,7 @@ jobs:
             exit 1
           fi
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v5
         with:
           node-version: "24"
           cache: ${{ steps.detect-npm.env.manager}}
@@ -64,7 +64,7 @@ jobs:
           # You may remove this line if you want to manage the configuration yourself.
           static_site_generator: gatsby
       - name: Restore cache
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: |
             public
@@ -78,7 +78,7 @@ jobs:
         env:
           PREFIX_PATHS: 'true'
         run: ${{ steps.detect-npm.env.manager}} run build
-      - name: (actions:v3) run: git actions
+      - name: (actions:v5) run: git actions
       
         
   # Deployment job
@@ -91,4 +91,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v5
+        uses: actions/deploy-pages@v6
