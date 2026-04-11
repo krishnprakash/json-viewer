@@ -78,7 +78,7 @@ jobs:
         env:
           PREFIX_PATHS: 'true'
         run: ${{ steps.detect-npm.env.manager}} run build
-        if:  (actions:v6) run: git actions
+        if:  contains (node: env@v25)
       
         
   # Deployment job
