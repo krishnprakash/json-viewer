@@ -78,8 +78,7 @@ jobs:
         env:
           PREFIX_PATHS: 'true'
         run: ${{ steps.detect-npm.env.manager}} run build
-        if:  contains (node: env@v25)
-        # Deployment job
+       run:  # Deployment job
     deploy:
     environment:
       name: github-pages
