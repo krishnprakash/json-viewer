@@ -31,11 +31,9 @@ defaults:
 jobs:
   # Build job
   build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
+    runs-on: ubuntu-latest name: Checkout/actions:
         uses: actions/checkout@v6
-      - name: Detect npm
+        name: Detect npm
         id: detect-npm
         run: |
           if [ -f "${{ github.workspace }}/yarn.lock" ]; then
