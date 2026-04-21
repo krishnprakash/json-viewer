@@ -1,0 +1,54 @@
+Skip to content
+krishnprakash
+Repository navigation
+Code
+Issues
+Settings
+Settings: krishnprakash/krishnprakash
+Access
+Code and automation
+Security and quality
+Integrations
+Runners Add new self-hosted runner · krishnprakash/krishnprakash
+Add new self-hosted runner · krishnprakash/krishnprakash
+Using self-hosted runners in public repositories is not recommended. Forks of your public repository can potentially run dangerous code on your self-hosted runner by creating a pull request. Learn more about security hardening for self-hosted runners.
+
+Adding a self-hosted runner requires that you download, configure, and execute the GitHub Actions Runner. If you do not already have an existing volume licensing agreement for your GitHub purchases, by downloading and configuring the GitHub Actions Runner, you agree to the GitHub Customer Agreement.
+
+Runner image
+
+macOS
+
+Linux
+
+Windows
+Architecture
+Download
+We recommend configuring the runner under "\actions-runner". This will help avoid issues related to service identity folder permissions and long path restrictions on Windows.
+
+# Create a folder under the drive root
+$ mkdir actions-runner; cd actions-runnerCopied! # Download the latest runner package
+$ Invoke-WebRequest -Uri https://github.com/actions/runner/releases/download/v2.333.1/actions-runner-win-x64-2.333.1.zip -OutFile actions-runner-win-x64-2.333.1.zip# Optional: Validate the hash
+$ if((Get-FileHash -Path actions-runner-win-x64-2.333.1.zip -Algorithm SHA256).Hash.ToUpper() -ne 'd0c4fcb91f8f0754d478db5d61db533bba14cad6c4676a9b93c0b7c2a3969aa0'.ToUpper()){ throw 'Computed checksum did not match' }# Extract the installer
+$ Add-Type -AssemblyName System.IO.Compression.FileSystem ; [System.IO.Compression.ZipFile]::ExtractToDirectory("$PWD/actions-runner-win-x64-2.333.1.zip", "$PWD")
+Configure
+# Create the runner and start the configuration experience
+$ ./config.cmd --url https://github.com/krishnprakash/krishnprakash --token A7QOFE5XEDHJXQNBD72LJA3J45GD6# Run it!
+$ ./run.cmd
+Using your self-hosted runner
+# Use this YAML in your workflow file for each job
+runs-on: self-hosted
+For additional details about configuring, running, or shutting down the runner, please check out our product docs.
+
+Footer
+© 2026 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Community
+Docs
+Contact
+Manage cookies
+Do not share my personal information
