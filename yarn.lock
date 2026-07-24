@@ -1216,9 +1216,9 @@ for-each@^0.3.5:
   dependencies:
     is-callable "^1.2.7"
 
-fs-extra@11.3.x:
-  version "11.3.5"
-  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-11.3.5.tgz#07a44eff40bea53e719909a532f91a23bf0769ff"
+fs-extra@11.4.x:
+  version "11.4.0"
+  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-11.4.0.tgz#f88ed6d180ac9e14b61b08e679468f0b1b6b4730"
   dependencies:
     graceful-fs "^4.2.0"
     jsonfile "^6.0.1"
