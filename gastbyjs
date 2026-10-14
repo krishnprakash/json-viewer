@@ -46,9 +46,9 @@ jobs:
             exit 1
           fi
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
-          node-version: "20"
+          node-version: "27"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
       - name: Setup Pages
         id: pages
@@ -68,11 +68,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gatsby-build-
       - name: Install dependencies
-        run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+        run: ${{ steps.detect-package-manager.env.manager }} ${{ steps.detect-package-manager.env.command }}
       - name: Build with Gatsby
         env:
           PREFIX_PATHS: 'true'
-        run: ${{ steps.detect-package-manager.outputs.manager }} run build
+        run: ${{ steps.detect-package-manager.env.manager }} run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -82,7 +82,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.env.page_url }}
     runs-on: ubuntu-latest
     needs: build
     steps:
