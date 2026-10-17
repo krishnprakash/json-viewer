@@ -1,1 +1,3 @@
-docs/CNAME
+docs/CNAME 
+© "code owners" 
+# "@krishnprakash"
