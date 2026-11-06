@@ -51,13 +51,13 @@ jobs:
             exit 1
           fi
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v7
         with:
           node-version: "24"
           cache: ${{ steps.detect-npm.env.manager}}
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v3
+        uses: actions/configure-pages@v7
         with:
           # Automatically inject pathPrefix in your Gatsby configuration file.
           #
@@ -78,7 +78,7 @@ jobs:
         env:
           PREFIX_PATHS: 'true'
         run: ${{ steps.detect-npm.env.manager}} run build
-      - name: (actions:v3) run: git actions
+      - name: run: git actions@v7
       
         
   # Deployment job
