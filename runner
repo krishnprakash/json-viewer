@@ -1,0 +1,60 @@
+Skip to content
+krishnprakash
+json-viewer
+Repository navigation
+Code
+Issues
+Pull requests
+1
+ (1)
+Agents
+Discussions
+Actions
+Projects
+Wiki
+Settings: krishnprakash/json-viewer
+Access
+Code, planning, and automation
+Security and quality
+Integrations
+Runners Add new self-hosted runner · krishnprakash/json-viewer
+Add new self-hosted runner · krishnprakash/json-viewer
+Using self-hosted runners in public repositories is not recommended. Forks of your public repository can potentially run dangerous code on your self-hosted runner by creating a pull request. Learn more about security hardening for self-hosted runners.
+
+Adding a self-hosted runner requires that you download, configure, and execute the GitHub Actions Runner. If you do not already have an existing volume licensing agreement for your GitHub purchases, by downloading and configuring the GitHub Actions Runner, you agree to the GitHub Customer Agreement.
+
+Runner image
+
+macOS
+
+Linux
+
+Windows
+Architecture
+Download
+# Create a folder
+$ mkdir actions-runner && cd actions-runner# Download the latest runner package
+$ curl -o actions-runner-linux-x64-2.338.2.tar.gz -L https://github.com/actions/runner/releases/download/v2.338.2/actions-runner-linux-x64-2.338.2.tar.gz# Optional: Validate the hash
+$ echo "baebf204307bac6193480852732f0aba2ae97b6c5597c244f4d5558390147c40  actions-runner-linux-x64-2.338.2.tar.gz" | shasum -a 256 -c# Extract the installer
+$ tar xzf ./actions-runner-linux-x64-2.338.2.tar.gz
+Configure
+# Create the runner and start the configuration experience
+$ ./config.sh --url https://github.com/krishnprakash/json-viewer --token A7QOFE4W3RM5XDAQTET23KLK5U5GQ# Last step, run it!
+$ ./run.sh
+Using your self-hosted runner
+# Use this YAML in your workflow file for each job
+runs-on: self-hosted
+For additional details about configuring, running, or shutting down the runner, please check out our product docs.
+
+Footer
+© 2026 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Community
+Docs
+Contact
+Manage cookies
+Do not share my personal information.
