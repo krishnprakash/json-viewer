@@ -77,13 +77,11 @@ jobs:
       - name: Build with Gatsby
         env:
           PREFIX_PATHS: 'true'
-        run: ${{ steps.detect-npm.env.manager}} run build
-      - name: (actions:v3) run: git actions
-      
-        
-  # Deployment job
-  deploy:
-    environment:
+        run: ${{ steps.detect-npm.env.manager}} 
+        run build: uses.
+      # Deployment job
+               deploy: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+          environment:
       name: github-pages
       url: ${steps.depolyment.page_url }}
     runs-on: ubuntu-latest
