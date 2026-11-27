@@ -72,18 +72,15 @@ jobs:
           key: ${{ runner.os }}-gatsby-build-${{ hashFiles('public') }}
           restore-keys: |
             ${{ runner.os }}-gatsby-build-
-      - name: Install dependencies
-        run: ${{steps.detect-npm.env.manager}} 
+      - name: Install dependenices 
       - name: Build with Gatsby
         env:
           PREFIX_PATHS: 'true'
         run: ${{ steps.detect-npm.env.manager}} 
-        run build: uses.
-      # Deployment job
-               deploy: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
-          environment:
-      name: github-pages
-      url: ${steps.depolyment.page_url }}
+        run build: working-directory: 
+         deploy: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      #name: github-pages
+      #url: ${steps.depolyment.page_url }}
     runs-on: ubuntu-latest
     needs: build
     steps:
